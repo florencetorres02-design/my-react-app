@@ -31,8 +31,7 @@
   --shadow-light-negative: #FFFFFF;
   
   /*Ruby-nee*/
-  --ruby-width: clamp(219px, calc(157.8571px + 19.1071vw), 433px);
-  --ruby-height: clamp(320px, calc(246.2857px + 23.0357vw), 578px);
+  
   /*Ruby*/
  
  
@@ -99,8 +98,9 @@ body{
      grid-row-start: 1;
 }
 .about-me-content .ruby-nee-about {
-    width: var(--ruby-width);
-    height: var(--ruby-height);
+    width: min(100%, 350px);
+    height: auto;
+    justify-self: center;
     object-fit: contain;
     position: absolute;
     right: 0;  
@@ -124,39 +124,61 @@ footer{
     grid-area: footer;
 }
 
+
 @media screen and (max-width: 770px) {
-    .about-me-content{
+
+    .about-me-content {
+        display: grid;
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "about-me"
-        "ruby-nee"
-        ;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "about-me"
+            "skills";
+
         width: 90%;
+        height: auto;
+        min-height: 900px;
+        gap: 1rem;
+        padding: 20px 5%;
+        position: relative;
+        overflow: hidden;
     }
 
-    .context-about-me p{
-       width: 100%;
-    }
-    .ruby-nee-about{
-       position: absolute;
-       right: 0;
-       bottom: 0;
-       left: auto;
-       top: auto;
-       height: auto;
-      
-    }
-    .about-me-content .programming-skills{
-     display: flex;
-     align-items: end;
-    
-
+    .context-about-me {
+        grid-area: about-me;
+        padding-bottom: clamp(230px, 65vw, 300px);
+        position: relative;
+        z-index: 2;
     }
 
-    .programming-skills .programming-skills-pic{
+    .context-about-me p {
+        width: 100%;
+    }
+
+    .about-me-content .ruby-nee-about {
+        position: absolute;
+        width: clamp(200px, 65vw, 300px);
+        height: auto;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        top: auto;
         z-index: 1;
     }
 
+    .about-me-content .programming-skills {
+        grid-area: skills;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .programming-skills .programming-skills-pic {
+        width: clamp(45px, 12vw, 70px);
+        height: clamp(45px, 12vw, 70px);
+    }
 }
 
 

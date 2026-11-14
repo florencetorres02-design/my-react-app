@@ -133,7 +133,7 @@
 
 .button-view-project img{
     width: var(--github-width);
-    height: var(var(--github-height));
+    height: var(--github-height);
     
 }
 
