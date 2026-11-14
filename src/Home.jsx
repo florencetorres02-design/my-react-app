@@ -82,7 +82,7 @@ export default function Home() {
              {name:"CONTACT", path:"/contact", icon: contact},
              {name:"PROJECTS", path:"/project", icon: project},
              {name:"CERTIFICATE", path:"/certificate", icon: certificate},
-             {name:"SKIILS", path:"/skills", icon: skills}
+             {name:"SKILLS", path:"/skills", icon: skills}
              ];
        
     
