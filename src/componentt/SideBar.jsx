@@ -55,7 +55,7 @@ export default function SideBar(props){
                      <NavLink to = "/letstalk" 
                      style={{display: "flex", alignItems: "center", gap: "1rem", color:"black"}}>
                        <img src={talk} width={30} height={30} />
-                      LET'T TALK
+                      LET'S TALK
                      </NavLink>
                   </nav>
                  <hr className="sidebar-line" />
