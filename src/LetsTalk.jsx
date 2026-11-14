@@ -41,7 +41,7 @@ export default function LetSTalk(){
 
             <nav className="lets-connect-nav">
 
-                <a href="https://t.me/YOUR_USERNAME"
+                <a href="https://web.telegram.org/"
                    target="_blank"
                    rel="noopener noreferrer"
                    className="lets-connect-a">
@@ -61,7 +61,7 @@ export default function LetSTalk(){
                     WhatsApp
                 </a>
 
-                <a href="mailto:YOUR_EMAIL"
+                <a href="https://www.messenger.com/"
                    className="lets-connect-a">
                     <img src={messenger}
                          alt="Email"

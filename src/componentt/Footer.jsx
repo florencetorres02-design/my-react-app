@@ -20,7 +20,7 @@ export default function Footer(){
                 <a href="" className="footer-a"><img src={about} alt="About Me" height={30} width={30}/>Abou Me</a>
                 <a href="" className="footer-a"><img src={contact} alt="Contact Me" height={30} width={30}/>Contact Me</a>
                 <a href="" className="footer-a"><img src={project} alt="Project Documentation" height={30} width={30}/>Project Documentation</a>
-                <a href="" className="footer-a"><img src={support} alt="Support" height={30} width={30}/>PSupport?</a>
+                <a href="" className="footer-a"><img src={support} alt="Support" height={30} width={30}/>Support?</a>
             </nav>
         </div>
 
