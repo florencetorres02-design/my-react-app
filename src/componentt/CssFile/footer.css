@@ -1,0 +1,249 @@
+/*[Footer] */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 300px;
+    grid-template-areas: "row1 row2 row3";
+    background-color: #FFFFFF;
+    
+   }
+
+footer .row-one-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 10PX 5%;
+    text-align: var(--colorText);
+    text-align: var(--detailSize);
+    font-weight: bold;
+    grid-area: row1;
+  
+   
+
+}
+
+footer .row-two-footer{
+    padding: 10PX 5%;
+    grid-area: row2;
+    
+}
+
+
+ .row-three-footer{
+    grid-area: row3;
+    padding: 10PX 5%;
+}
+
+/*[row-1]*/
+.row-one-footer .footer-role-owner{
+    width: 50%;
+}
+
+.row-one-footer .footer-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 80%;
+}
+
+ .footer-nav .footer-a{
+    color: var(--colorText);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+ }
+
+ /*[row-2]*/
+ footer .row-two-footer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+
+ }
+
+
+ .row-two-footer .footer-profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ }
+
+ .footer-profile .footer-name-owner{
+    color: var(--highlight);
+ }
+
+  
+ .footer-policy-nav .rules-link{
+    color: var(--colorText);
+ }
+
+  /*[row-3]*/
+
+footer .row-three-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: row3;
+    row-gap: 1em;
+}
+
+
+
+
+.row-three-footer .footer-media-nav{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.footer-media-nav{
+    display: flex;
+    gap: 1em;
+}
+
+.footer-media .footer-media-pic{
+      height: 50px;
+      width: 50px;
+      background-color: #CF0909;
+      gap: 1em;
+      border-radius: 60px;
+}
+
+
+.footer-a, .rules-link{
+    transition: color ease-in 0.3s;
+}
+
+.footer-a:hover, .rules-link:hover{
+    color: #CF0909;
+}
+
+
+/* =========================
+   TABLET RESPONSIVE
+   ========================= */
+@media screen and (max-width: 900px) {
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "row1 row3"
+            "row2 row2";
+        height: auto;
+        row-gap: 2em;
+        padding: 30px 3%;
+    }
+
+    footer .row-one-footer {
+        align-items: flex-start;
+    }
+
+    .row-one-footer .footer-role-owner {
+        width: 100%;
+    }
+
+    footer .row-two-footer {
+        grid-column: 1 / -1;
+        gap: 1em;
+        text-align: center;
+    }
+
+    footer .row-three-footer {
+        justify-content: flex-start;
+    }
+
+    .row-three-footer .footer-media-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .row-two-footer .footer-profile {
+        justify-content: center;
+    }
+
+    .row-two-footer .footer-policy-nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+@media screen and (max-width: 600px) {
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "row1"
+            "row3"
+            "row2";
+        height: auto;
+        gap: 2em;
+        padding: 30px 5%;
+    }
+
+    footer .row-one-footer {
+        align-items: center;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .row-one-footer .footer-role-owner {
+        width: 100%;
+    }
+
+    .row-one-footer .footer-nav {
+        width: 100%;
+        align-items: center;
+    }
+
+    footer .row-two-footer {
+        grid-column: auto;
+        padding: 10px 0;
+        gap: 1em;
+    }
+
+    .row-two-footer .footer-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .row-two-footer .footer-profile img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .row-two-footer .footer-policy-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    footer .row-three-footer {
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .row-three-footer .footer-media-nav {
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .footer-media .footer-media-pic {
+        width: 40px;
+        height: 40px;
+    }
+
+    .row-two-footer .credit,
+    .row-two-footer .made {
+        text-align: center;
+    }
+}

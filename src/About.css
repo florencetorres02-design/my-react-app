@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --background: #F3F3F3;
+    --highlight: #CF0909;
+    --colorText: #1E1E1E;
+   /*text size*/
+    --detailSize: clamp(14px, calc(13.1102px + 0.2022vw), 16px);
+    --role: clamp(36px, calc(9.3064px + 6.0667vw), 70px);
+    --sub-role: clamp(16px, calc(14.8571px + 0.3571vw), 20px);
+    --name: clamp(16px, calc(14.2204px + 0.4044vw), 20px);
+    --main-button-text: clamp(16px, calc(14.8571px + 0.3571vw), 20px);
+  /*height and width size */
+  --headerHeight: clamp(70px, calc(56.6532px + 3.0334vw), 100px);
+  --SeeProject: clamp(200px, calc(143.9434px + 12.7401vw), 326px);
+  --ProjectCard: clamp(300px, calc(237.7149px + 14.1557vw), 440px);
+  --SkillsCard: clamp(150px, calc(127.7553px + 5.0556vw), 200px);
+  /*image size*/
+  --logo: clamp(70px, calc(56.6532px + 3.0334vw), 100px);
+ 
+  /*button-size*/
+  --lets-talk-width:clamp(100px, calc(85.7143px + 4.4643vw), 150px);
+  --lets-talk-height: clamp(40px, calc(37.1429px + 0.8929vw), 50px);
+  /*shadow color*/
+  --shadow-light-positive: #C7A9A9;
+  --shadow-light-negative: #FFFFFF;
+  
+  /*Ruby-nee*/
+  --ruby-width: clamp(219px, calc(157.8571px + 19.1071vw), 433px);
+  --ruby-height: clamp(320px, calc(246.2857px + 23.0357vw), 578px);
+  /*Ruby*/
+ 
+ 
+ --about-me-height: 630px;
+ --about-me-width: clamp(364px, calc(125.1429px + 74.6429vw), 1200px);
+
+}
+
+
+body{
+    min-height: 100vh;
+    background-color: var(--background);
+    
+}
+.container-About{
+     display: grid;
+     grid-template-columns: 70px 1fr;
+     grid-template-areas:
+        "header header"
+        "nav nav"
+        "main main"
+        "footer footer";
+        gap: 5rem;
+   
+}
+/*Header zone */
+
+
+
+
+/* mian zone */
+.main-content-about{
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+}
+
+.about-me-content{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50%;
+  gap: 2rem;
+  padding: 10px 5%;
+  height: var(--about-me-height);
+  width: var(--about-me-width);
+  box-shadow: 8px 8px 4px var(--shadow-light-positive), -8px -8px 16px var(--shadow-light-negative);
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  position: relative;
+
+}
+
+.context-about-me h1{
+    color: var(--highlight);
+}
+.context-about-me .about-me-details {
+    font-size: var(--detailSize);
+    letter-spacing: clamp(0.01em, 0.02vw, 0.04em);
+    line-height: clamp(1.5, 1.8vw, 1.8);
+    
+}
+
+.about-me-content .context-about-me{
+     grid-row-start: 1;
+}
+.about-me-content .ruby-nee-about {
+    width: var(--ruby-width);
+    height: var(--ruby-height);
+    object-fit: contain;
+    position: absolute;
+    right: 0;  
+    bottom: 0;
+
+}
+
+.about-me-content .programming-skills{
+    display: flex;
+    align-items: center;
+    grid-row-start: 2;
+    gap: 2em;
+}
+
+.programming-skills .programming-skills-pic{
+    height: clamp(50px, calc(35.7143px + 4.4643vw), 100px);
+    width: clamp(50px, calc(35.7143px + 4.4643vw), 100px);
+}
+
+footer{
+    grid-area: footer;
+}
+
+@media screen and (max-width: 770px) {
+    .about-me-content{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "about-me"
+        "ruby-nee"
+        ;
+        width: 90%;
+    }
+
+    .context-about-me p{
+       width: 100%;
+    }
+    .ruby-nee-about{
+       position: absolute;
+       right: 0;
+       bottom: 0;
+       left: auto;
+       top: auto;
+       height: auto;
+      
+    }
+    .about-me-content .programming-skills{
+     display: flex;
+     align-items: end;
+    
+
+    }
+
+    .programming-skills .programming-skills-pic{
+        z-index: 1;
+    }
+
+}
+
+
+
+ 
+
+
+
+
+ 

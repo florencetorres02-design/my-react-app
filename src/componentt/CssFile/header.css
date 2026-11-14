@@ -1,0 +1,132 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --background: #F3F3F3;
+    --highlight: #CF0909;
+    --colorText: #1E1E1E;
+   /*text size*/
+   
+  /*height and width size */
+
+  /*image size*/
+  --logo: clamp(70px, calc(56.6532px + 3.0334vw), 100px);
+  /*button-size*/
+  --lets-talk-width:clamp(100px, calc(85.7143px + 4.4643vw), 150px);
+  --lets-talk-height: clamp(40px, calc(37.1429px + 0.8929vw), 50px);
+  /*shadow color*/
+  --shadow-light-positive: #C7A9A9;
+  --shadow-light-negative: #FFFFFF;
+
+}
+
+
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    letter-spacing: 2%;
+    background-color: #FFFFFF;
+    
+   
+
+}
+
+.contant-me{
+    color: #A30707;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-container img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+
+.logo-container h2 {
+    font-size: var(--name);
+    color: var(--highlight);
+    white-space: nowrap;
+    
+}
+
+
+.second-Container .navDekstop {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.navDekstop a{
+    color: #1E1E1E;
+    transition: color ease-in 0.3s;
+}
+
+.navDekstop a.active{
+    color: red;
+}
+
+.navDekstop a:hover{
+    color: var(--highlight);
+}
+
+
+
+.second-Container{
+  display: flex;
+  gap: 30px;
+ 
+}
+
+.second-Container .lets-talk {
+    height: var(--lets-talk-height);
+    width: var(--lets-talk-width);
+    box-shadow: 8px 8px 4px var(--shadow-light-positive), -8px -8px 16px var(--shadow-light-negative);
+    color: var(--highlight);
+    border: 2px solid rgba(190, 15, 2, 0.25);
+    border-radius: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lets-talk {
+    transition: background-color 0.3s ease;
+}
+
+.lets-talk:hover {
+    background-color: #A30707;
+    color: #FFFF;
+}
+
+
+
+
+
+@media screen and (max-width:  770px)  {
+
+    .second-Container .navDekstop{
+        display: none;
+     
+        
+    }
+
+}
+ 
+
+
+

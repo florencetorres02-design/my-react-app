@@ -1,0 +1,271 @@
+:root{
+    --background: #F3F3F3;
+    --highlight: #CF0909;
+    --colorText: #1E1E1E;
+   /*text size*/
+   
+  /*height and width size */
+
+  /*image size*/
+  --logo: clamp(70px, calc(56.6532px + 3.0334vw), 100px);
+  /*button-size*/
+  --lets-talk-width:clamp(100px, calc(85.7143px + 4.4643vw), 150px);
+  --lets-talk-height: clamp(40px, calc(37.1429px + 0.8929vw), 50px);
+  /*shadow color*/
+  --shadow-light-positive: #C7A9A9;
+  --shadow-light-negative: #FFFFFF;
+
+}
+
+
+/* Main Section */
+.contact-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    box-sizing: border-box;
+}
+
+/* Container */
+.contact-container {
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+
+    background-color: #FFFFFF;
+  
+    border-radius: 15px;
+    box-sizing: border-box;
+
+    box-shadow: 8px 8px 4px var(--shadow-light-positive), -8px -8px 16px var(--shadow-light-negative);
+}
+
+/* Header */
+.contact-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.contact-header .contant-me {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 10px;
+    color:  var(--highlight);
+}
+
+.contact-header .info-header {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #888;
+}
+
+
+/* Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+/* Input Group */
+.form-group {
+    position: relative;
+    width: 100%;
+}
+
+/* Inputs */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 18px 14px;
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    border: 1px solid #888;
+    border-radius: 8px;
+
+    background: transparent;
+    color: inherit;
+
+    outline: none;
+    box-sizing: border-box;
+
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+/* Textarea */
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Floating Labels */
+.form-group label {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 1rem;
+    color: #888;
+
+    pointer-events: none;
+    background: transparent;
+
+    transition: all 0.25s ease;
+}
+
+/* Textarea Label */
+.textarea-group label {
+    top: 18px;
+    transform: none;
+}
+
+/* Floating Effect */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: 0;
+    transform: translateY(-50%);
+
+    font-size: 0.75rem;
+    color: var(--highlight);
+
+    background: white;
+    padding: 0 6px;
+}
+
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: 0;
+    transform: translateY(-50%);
+
+    font-size: 0.75rem;
+    color: var(--highlight);
+
+    background: white;
+    padding: 0 6px;
+}
+
+/* Focus Effect */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--highlight);
+    box-shadow: 0 0 0 3px var(--shadow-light-positive);
+}
+
+/* Privacy Consent */
+.privacy-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.privacy-group input {
+    margin-top: 4px;
+    accent-color: #22c55e;
+    cursor: pointer;
+}
+
+.privacy-group label {
+    cursor: pointer;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+
+    border: 2px solid var(--highlight);
+    border-radius: 8px;
+    background-color: #FFFFFF;
+
+  
+    color: var(--highlight);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease,
+                transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: var(--highlight);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/*error message*/
+.error-message{
+    color: #ff6347;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 20px;
+    }
+
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-form {
+        gap: 22px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 25px 12px;
+    }
+
+    .contact-container {
+        padding: 15px;
+    }
+
+    .contact-header {
+        margin-bottom: 25px;
+    }
+
+    .contact-header p {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.95rem;
+        padding: 16px 12px;
+    }
+
+    .form-group label {
+        left: 12px;
+        font-size: 0.9rem;
+    }
+
+    .privacy-group {
+        font-size: 0.8rem;
+    }
+
+    .submit-btn {
+        padding: 13px;
+    }
+}

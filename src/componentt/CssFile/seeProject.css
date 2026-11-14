@@ -1,0 +1,108 @@
+
+:root{
+     --see-project-height: clamp(200px, calc(164.0000px + 11.2500vw), 400px);
+     
+     --shadow-light-positive: #C7A9A9;
+     --shadow-light-negative: #FFFFFF;
+      --highlight: #CF0909;
+
+      --button-width: clamp(120px, calc(104.2857px + 4.9107vw), 175px);
+      --button-hieght: clamp(40px, calc(34.2857px + 1.7857vw), 60px);
+
+      --border-color-button: rgba(190, 15, 2, 0.25);
+
+      --github-height: clamp(30px, calc(24.2857px + 1.7857vw), 50px)      
+      --github-width: clamp(50px, calc(47.1429px + 0.8929vw), 60px);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.see-project-container{
+    width:  70%;
+    height: var(--see-project-height);
+    box-shadow: 8px 8px 4px var(--shadow-light-positive), -10px -8px 16px var(--shadow-light-negative);
+    border-radius: 8px;
+    padding: 10px 5%;
+    background-color: #FFFFFF;
+    position: relative;
+    
+}
+
+
+.see-project-container .project-image{
+    position: absolute;
+     width: 50%;
+     height: 100%;
+     top: 0;
+     right: 0;
+     object-fit: cover;
+  
+}
+
+
+.corner1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+     height: 100%;
+}
+
+.corner1 h1{
+    color: var(--highlight);
+    font-size: clamp(32px, calc(22.8571px + 2.8571vw), 64px);
+}
+
+.corner1 .project-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--button-width);
+    height: var(--button-hieght);
+    font-weight: bold;
+    border-radius: 24px;
+    border: solid 2px var(--highlight);
+    box-shadow: 8px 8px 4px var(--shadow-light-positive), -10px -8px 16px var(--shadow-light-negative);
+    background-color: #FFFFFF;
+    transition:  background-color 0.3s ease;
+}
+
+.corner1 .github{
+    width:  var(--github-width);
+    height: var(--github-width);
+}
+
+.project-button a{
+   color: var(--highlight);
+   font-size: clamp(16px, calc(14.8571px + 0.3571vw), 20px);
+   text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease;
+    
+    
+}
+
+.project-button:hover{
+  background-color: var(--highlight);
+}
+.project-button a:hover{
+  color: #FFFF;
+}
+
+
+@media screen and (max-width: 481px) {
+  .see-project-container{
+    width: 90%;
+  }
+
+}
+
+
+ 

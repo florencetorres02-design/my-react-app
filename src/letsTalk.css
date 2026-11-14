@@ -1,0 +1,106 @@
+
+.container-lets-talk {
+    display: flex;
+    justify-content: center;
+     grid-template-columns: 1fr;
+     grid-template-areas: 
+     "main"
+     "footer"
+     ;
+     padding: 40px 5%;
+    
+    
+}
+
+.container-lets-talk .lets-connect-card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    min-height: 450px;  
+    padding: 40px 25px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
+    grid-area: main;
+}
+
+.lets-coneect-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 35px;
+}
+
+.container-lets-talk .lets-connect-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.lets-connect-profile .lets-talk-profile {
+    background-image: url("./ruby\ profile.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.container-lets-talk .lets-connect-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.lets-connect-nav .lets-connect-a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.lets-connect-nav .lets-connect-a:hover {
+    background-color: #CF0909;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+
+.lets-connect-a .lets-connect-image {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+
+footer{
+    grid-area: footer;
+    
+}
+/* Mobile */
+@media screen and (max-width: 600px) {
+    .container-lets-talk {
+        padding: 25px 5%;
+    }
+
+    .container-lets-talk .lets-connect-card {
+        padding: 30px 20px;
+        min-height: auto;
+    }
+
+    .lets-connect-profile .lets-talk-profile {
+        width: 80px;
+        height: 80px;
+    }
+}

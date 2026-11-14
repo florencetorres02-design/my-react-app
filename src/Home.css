@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --background: #F3F3F3;
+    --highlight: #CF0909;
+    --colorText: #1E1E1E;
+   /*text size*/
+    --detailSize: clamp(14px, calc(13.1102px + 0.2022vw), 16px);
+    --role: clamp(36px, calc(9.3064px + 6.0667vw), 70px);
+    --sub-role: clamp(16px, calc(14.8571px + 0.3571vw), 20px);
+    --name: clamp(16px, calc(14.2204px + 0.4044vw), 20px);
+    --main-button-text: clamp(16px, calc(14.8571px + 0.3571vw), 20px);
+  /*height and width size */
+  --headerHeight: clamp(70px, calc(56.6532px + 3.0334vw), 100px);
+  --SeeProject: clamp(200px, calc(143.9434px + 12.7401vw), 326px);
+  --ProjectCard: clamp(300px, calc(237.7149px + 14.1557vw), 440px);
+  --SkillsCard: clamp(150px, calc(127.7553px + 5.0556vw), 200px);
+  /*image size*/
+  --logo: clamp(70px, calc(56.6532px + 3.0334vw), 100px);
+  /*button-size*/
+  --lets-talk-width:clamp(100px, calc(85.7143px + 4.4643vw), 150px);
+  --lets-talk-height: clamp(40px, calc(37.1429px + 0.8929vw), 50px);
+  --main-button-width: clamp(120px, calc(104.2857px + 4.9107vw), 175px);
+  --main-button-height: clamp(40px, calc(34.2857px + 1.7857vw), 60px);
+  /*shadow color*/
+  --shadow-light-positive: #C7A9A9;
+  --shadow-light-negative: #FFFFFF;
+  /*Ruby-nee*/
+  --ruby-width: clamp(369px, calc(287.5714px + 25.4464vw), 654px);
+  --ruby-height: clamp(493px, calc(416.7143px + 23.8393vw), 760px);
+}
+
+
+
+
+body {
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+.container-home{
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+   
+}
+
+/*[main content]*/
+.main-content-home{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:  
+    "container-title-home ruby-nee-home"
+    "home-container-layer-button  ruby-nee-home"
+    ;
+    padding: 10px 5%;
+}
+
+/*[ruby-nee-home]*/
+.main-content-home .ruby-nee-home{
+    height: clamp(493px, calc(416.7143px + 23.8393vw), 760px);
+    width: var(--ruby-width);
+    grid-area: ruby-nee-home;
+   
+}
+
+/*[container-title-home]*/
+
+.container-title-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 5%;
+    gap: 30px;
+    grid-area: container-title-home;
+    object-fit: cover;
+}
+
+.container-title-home .role-home{
+    font-size: var(--role);
+    color: var(--highlight);
+}
+
+.container-title-home .detail-role-home{
+   font-size: var(--sub-role);
+    color: var(--colorText);
+}
+
+.container-title-home .description-role-home{
+    font-size: var(--detailSize);
+    letter-spacing: clamp(0.01em, 0.02vw, 0.04em);
+    line-height: clamp(1.5, 1.8vw, 1.8);
+    color: var(--colorText);
+    width: 50%;
+}
+
+/*[home-container-layer-button]*/
+
+.home-container-layer-button{
+    display: flex;
+    flex-direction: column;
+    grid-area: home-container-layer-button;
+    padding: 10px 5%;
+    gap: 30px;
+}
+
+.home-container-layer-button .button-home{
+  
+    width: var(--main-button-width);
+    height: var(--main-button-height);
+
+    background-color: var(--background);
+    color: var(--highlight);
+    border: solid 2px var(--highlight);
+    border-radius: 16px;
+    box-shadow: 8px 8px 4px var(--shadow-light-positive), 8px 8px 8px var(--shadow-light-negative);
+     transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-size: var(--main-button-text);
+}
+
+
+.home-container-layer-button .button-layer-home{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.lets-talk {
+    transition: background-color 0.3s ease;
+}
+
+.home-container-layer-button .button-home:hover {
+    background-color: var(--highlight);
+    color: #FFFFFF;
+}
+
+
+
+/*[social-media-home]*/
+.social-media-home {
+    display: flex;
+    gap: 30px;
+}
+
+.social-media-home .social-media-link-home {
+    background-color: var(--highlight);
+    border-radius: 60px;
+     
+}
+.social-media-home img{
+    height: 60px;
+    width: 60px;
+
+}
+
+
+@media screen and (max-width: 481px) {
+    
+    .container-home {
+        gap: 0;
+    }
+
+     .main-content-home{
+        grid-area: main-content-home;
+        position: relative;
+        height: 1000px;
+      
+     }
+    
+    
+    .container-title-home {
+         display: flex;
+         flex-direction: column;
+         justify-content: start;
+    }
+
+  
+    .container-title-home .description-role-home{
+        width: 100%;
+    }
+
+    .home-container-layer-button{
+        justify-content: end;
+    }
+    .ruby-nee-home{
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        right:  0;
+    }
+}
+
+
